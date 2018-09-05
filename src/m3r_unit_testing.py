@@ -9,11 +9,11 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 ###############################################################################
 #
 # TODO: 1.
-#   Allow this module to use the  rosegraphics.py  module by marking the
-#     src
-#   folder in this project as a "Sources Root", as follows:
-#
-#     In the Project window (to the left), right click on the src  folder,
+
+#     In the Project window (to the left), right clic#   Allow this module to use the  rosegraphics.py  module by marking the
+# #     src
+# #   folder in this project as a "Sources Root", as follows:
+# #k on the src  folder,
 #     then select  Mark Directory As  ~  Sources Root.
 #
 ###############################################################################
