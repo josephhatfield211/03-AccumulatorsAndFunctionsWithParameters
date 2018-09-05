@@ -6,17 +6,23 @@ This module demonstrates simple LOOPS of the form:
 and also USING OBJECTS.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Joey Hatfield.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
-
+import math as m
 
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-
-
+    print_sequence1()
+    print_sequence2()
+    print_sequence3()
+    print_cosines()
+    draw_circles1()
+    draw_circles2()
+    draw_circles3()
+    draw_cosines_and_sines()
 def print_sequence1():
     """
     Prints:
@@ -29,7 +35,7 @@ def print_sequence1():
        200
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # done: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -37,8 +43,11 @@ def print_sequence1():
     print('--------------------------------------------------')
     print('Running print_sequence1:')
     print('--------------------------------------------------')
-
-
+    n=0
+    for k in range(20):
+        print(n)
+        n = n + 10
+    print(n)
 def draw_circles1():
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
@@ -48,7 +57,7 @@ def draw_circles1():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # done: 3. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # HINT: You might find a prior module useful when 'writing' this code.
@@ -57,6 +66,23 @@ def draw_circles1():
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
+
+    window=rg.RoseWindow(200,200)
+    turtle = rg.SimpleTurtle()
+    turtle.speed = 10
+    z=0
+    for k in range(20):
+        turtle.pen_up()
+        turtle.go_to(rg.Point(200, 200))
+        turtle.right(90)
+        turtle.forward(z)
+        turtle.left(90)
+        turtle.pen_down()
+        turtle.draw_circle(z)
+        z = z + 10
+
+    window.close_on_mouse_click()
+
 
 
 def print_sequence2():
@@ -71,7 +97,7 @@ def print_sequence2():
       390.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function, per its doc-string above.
+    # done: 4. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -80,6 +106,11 @@ def print_sequence2():
     print('Running print_sequence2:')
     print('--------------------------------------------------')
 
+    n = 50
+    for k in range(17):
+        print(n)
+        n = n + 20
+    print(n)
 
 def draw_circles2():
     """
@@ -92,7 +123,7 @@ def draw_circles2():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement this function, per its doc-string above.
+    # done: 5. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -101,6 +132,23 @@ def draw_circles2():
     print('Running draw_circles2:  See graphics window')
     print('--------------------------------------------------')
 
+    window = rg.RoseWindow(400,400)
+    turtle = rg.SimpleTurtle()
+    turtle.speed = 10
+    z = 50
+    turtle.paint_bucket = rg.PaintBucket('blue')
+    for k in range(17):
+        turtle.pen_up()
+        turtle.go_to(rg.Point(z, 100))
+        turtle.right(90)
+        turtle.forward(10)
+        turtle.left(90)
+        turtle.pen_down()
+        turtle.begin_fill()
+        turtle.draw_circle(10)
+        turtle.end_fill()
+        z = z + 20
+    window.close_on_mouse_click()
 
 def print_sequence3():
     """
@@ -113,7 +161,7 @@ def print_sequence3():
       100.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement this function, per its doc-string above.
+    # done: 6. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -121,7 +169,10 @@ def print_sequence3():
     print('--------------------------------------------------')
     print('Running print_sequence3:')
     print('--------------------------------------------------')
-
+    n = 0
+    for k in range(100):
+        n = n + 1
+        print(n)
 
 def draw_circles3():
     """
@@ -132,7 +183,7 @@ def draw_circles3():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function, per its doc-string above.
+    # done: 7. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -141,6 +192,22 @@ def draw_circles3():
     print('Running draw_circles3:  See graphics window')
     print('--------------------------------------------------')
 
+    window = rg.RoseWindow(300,300)
+    turtle = rg.SimpleTurtle()
+    turtle.speed = 10
+    z = 0
+    for k in range(100):
+        z = z + 1
+        turtle.pen_up()
+        turtle.go_to(rg.Point(200, 150))
+        turtle.right(90)
+        turtle.forward(z)
+        turtle.left(90)
+        turtle.pen_down()
+        turtle.draw_circle(z)
+
+
+    window.close_on_mouse_click()
 
 def print_cosines():
     """
@@ -161,7 +228,7 @@ def print_cosines():
        68.9855097830147
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement this function, per its doc-string above.
+    # done: 8. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     #
@@ -177,7 +244,11 @@ def print_cosines():
     print('Running print_cosines:')
     print('--------------------------------------------------')
 
-
+    n = 0
+    for k in range(100):
+        print(80*m.cos(n))
+        n = n + 1
+    print(80*m.cos(n))
 def draw_cosines_and_sines():
     """
     -- Constructs a window whose width and height are both 400.
@@ -193,7 +264,7 @@ def draw_cosines_and_sines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement this function, per its doc-string above.
+    # done: 9. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -202,6 +273,20 @@ def draw_cosines_and_sines():
     print('Running draw_cosines_and_sines:  See graphics window')
     print('--------------------------------------------------')
 
+    window = rg.RoseWindow(400, 400)
+    turtle = rg.SimpleTurtle()
+    turtle.speed = 10
+    z = 0
+    for k in range(101):
+        turtle.pen_up()
+        turtle.go_to(rg.Point(200+(80*m.cos(z)), 200+(80*m.cos(z))))
+        turtle.right(90)
+        turtle.forward(10)
+        turtle.left(90)
+        turtle.pen_down()
+        turtle.draw_circle(10)
+        z = z + 1
+    window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
