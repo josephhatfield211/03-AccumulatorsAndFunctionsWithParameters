@@ -8,7 +8,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 """
 ###############################################################################
 #
-# TODO: 1.
+# done: 1.
 
 #     In the Project window (to the left), right clic#   Allow this module to use the  rosegraphics.py  module by marking the
 # #     src
@@ -69,7 +69,7 @@ def distance(point):
 main()
 
 ###############################################################################
-# TODO: 2.
+# done: 2.
 #
 # READ the following, asking questions as needed.
 # When you believe that you understading what is says about UNIT TESTING,
